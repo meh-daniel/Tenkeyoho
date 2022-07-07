@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tenkeyoho.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.test.iml" />
+    </modules>
+  </component>
+</project>
