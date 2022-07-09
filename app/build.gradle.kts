@@ -27,7 +27,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -54,8 +57,8 @@ dependencies {
     kapt(Dependencies.Hilt.compiler)
 
     // Lifecycle
-    implementation(Dependencies.Lifecycle.lifecycleViewmodel)
-    implementation(Dependencies.Lifecycle.lifecycleLivedata)
+    implementation(Dependencies.Lifecycle.viewmodel)
+    implementation(Dependencies.Lifecycle.livedata)
 
     // Coroutines
     implementation(Dependencies.Coroutines.core)

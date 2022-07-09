@@ -27,8 +27,8 @@ object Dependencies {
     }
 
     object Lifecycle {
-        const val lifecycleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versionLifecycle"
-        const val lifecycleLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versionLifecycle"
+        const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versionLifecycle"
+        const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versionLifecycle"
     }
 
     object Coroutines {
