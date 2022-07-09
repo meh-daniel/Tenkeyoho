@@ -10,6 +10,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Tenkeyoho.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.unitTest.iml" />
     </modules>
   </component>
 </project>
