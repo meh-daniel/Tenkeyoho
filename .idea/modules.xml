@@ -14,6 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Tenkeyoho.data.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Tenkeyoho.domain.unitTest.iml" />
     </modules>
   </component>
 </project>
