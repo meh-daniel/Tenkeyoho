@@ -60,7 +60,7 @@ dependencies {
     implementation(Dependencies.Lifecycle.viewmodel)
     implementation(Dependencies.Lifecycle.livedata)
 
-    // Lifecycle
+    // Navigation
     implementation(Dependencies.Navigation.fragment)
     implementation(Dependencies.Navigation.ui)
 

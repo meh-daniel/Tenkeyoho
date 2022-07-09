@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation
+package meh.daniel.com.tenkeyoho.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
