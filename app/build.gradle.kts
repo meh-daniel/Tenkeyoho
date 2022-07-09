@@ -60,6 +60,10 @@ dependencies {
     implementation(Dependencies.Lifecycle.viewmodel)
     implementation(Dependencies.Lifecycle.livedata)
 
+    // Lifecycle
+    implementation(Dependencies.Navigation.fragment)
+    implementation(Dependencies.Navigation.ui)
+
     // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)
@@ -72,6 +76,7 @@ dependencies {
     // UI
     implementation(Dependencies.UI.constraintLayout)
     implementation(Dependencies.UI.recyclerView)
+    implementation(Dependencies.UI.fragmentKtx)
 
     // Android
     implementation(Dependencies.Android.coreKtx)
