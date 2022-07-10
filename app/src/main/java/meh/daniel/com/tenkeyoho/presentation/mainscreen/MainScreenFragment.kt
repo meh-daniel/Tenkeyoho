@@ -14,9 +14,6 @@ class MainScreenFragment : Fragment(R.layout.fragment_mainscreen) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainscreenBinding.bind(view)
-        binding.openScreenInfoWeather.setOnClickListener {
-            findNavController().navigate(R.id.action_mainScreenFragment_to_infoWeatherFragment)
-        }
     }
 
 }

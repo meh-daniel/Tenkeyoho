@@ -12,7 +12,7 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun filmRepository(
+    fun WeatherForecastRepositoryModule(
         api: IDataSource
     ): IWeatherForecastRepository = WeatherForecastRepository(api)
 
