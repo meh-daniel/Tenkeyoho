@@ -35,7 +35,7 @@ class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHold
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if(getItem(position).main.temp > 15){
+        return if(getItem(position).main.temp > 19){
             HEAT_TYPE
         } else{
             COLD_TYPE
