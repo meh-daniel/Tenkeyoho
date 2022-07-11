@@ -38,7 +38,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
+
+        // без данного параметра viewModel не инициализировалась с помощью фабрики
+        freeCompilerArgs = listOf("-Xjvm-default=compatibility")
     }
     buildFeatures {
         viewBinding = true

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import meh.daniel.com.tenkeyoho.data.model.WeathersNW
 import meh.daniel.com.tenkeyoho.databinding.ItemColdweatherBinding
-import meh.daniel.com.tenkeyoho.databinding.ItemHeatweatherBinding
+import meh.daniel.com.tenkeyoho.databinding.ItemHotweatherBinding
 
 private const val HEAT_TYPE = 1000
 private const val COLD_TYPE = 1100
@@ -15,7 +15,7 @@ private const val COLD_TYPE = 1100
 class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHolder>(weatherDiffUtil){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =  when(viewType){
         HEAT_TYPE -> {
-            val binding = ItemHeatweatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = ItemHotweatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             HeatViewHolder(binding)
         }
         COLD_TYPE -> {
@@ -43,15 +43,17 @@ class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHold
     }
 }
 
-class HeatViewHolder(private val binding: ItemHeatweatherBinding) : RecyclerView.ViewHolder(binding.root){
+class HeatViewHolder(private val binding: ItemHotweatherBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(item: WeathersNW.WeatherInfo){
         binding.tvTemp.text = item.main.temp.toString()
+        binding.tvTime.text = item.dtTxt
     }
 }
 
 class ColdViewHolder(private val binding: ItemColdweatherBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(item: WeathersNW.WeatherInfo){
         binding.tvTemp.text = item.main.temp.toString()
+        binding.tvTime.text = item.dtTxt
     }
 }
 
