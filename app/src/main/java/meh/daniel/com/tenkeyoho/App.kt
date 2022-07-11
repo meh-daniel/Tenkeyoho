@@ -6,7 +6,6 @@ import meh.daniel.com.tenkeyoho.data.WeatherApi
 import meh.daniel.com.tenkeyoho.data.WeatherRepositoryImpl
 import meh.daniel.com.tenkeyoho.domain.WeatherRepository
 
-@HiltAndroidApp
 class App : Application(){
 
     companion object{

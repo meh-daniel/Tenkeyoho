@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/layout/fragment_mainscreen.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/item_coldweather.xml" value="0.75" />
         <entry key="app/src/main/res/layout/item_heatweather.xml" value="0.340625" />
-        <entry key="app/src/main/res/layout/item_hotweather.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_hotweather.xml" value="0.75" />
       </map>
     </option>
   </component>
