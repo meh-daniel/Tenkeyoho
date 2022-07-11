@@ -2,7 +2,7 @@ object Dependencies {
     // Hilt
     private const val versionHilt = "2.40.5"
     // Lifecycle
-    private const val versionLifecycle = "2.5.0"
+    private const val versionLifecycle = "2.4.0-alpha03"
     // Navigation
     private const val versionNavigation = "2.5.0"
     // Coroutines
