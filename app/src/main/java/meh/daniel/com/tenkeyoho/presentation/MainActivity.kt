@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import dagger.hilt.android.AndroidEntryPoint
 import meh.daniel.com.tenkeyoho.App
 import meh.daniel.com.tenkeyoho.databinding.ActivityMainBinding
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private var weatherAdapter = WeatherAdapter()
 
     private val mainViewModel : MainViewModel by viewModels {
-        MainViewModelFactory(repository = App.weatherRepository)
+        MainViewModelFactory(App.weatherRepository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
