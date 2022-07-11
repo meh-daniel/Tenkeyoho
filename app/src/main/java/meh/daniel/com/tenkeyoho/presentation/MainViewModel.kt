@@ -8,6 +8,7 @@ import meh.daniel.com.tenkeyoho.data.model.WeathersNW
 import meh.daniel.com.tenkeyoho.domain.WeatherRepository
 
 class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
+
     private val _weathers : MutableLiveData<List<WeathersNW.WeatherInfo>> = MutableLiveData()
     val weathers : LiveData<List<WeathersNW.WeatherInfo>> get() = _weathers
 
@@ -22,7 +23,6 @@ class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
         }
     }
 }
-
 
 class MainViewModelFactory(private val repository: WeatherRepository) : ViewModelProvider.Factory {
 

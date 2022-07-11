@@ -15,7 +15,6 @@ import retrofit2.http.Query
 const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 
 interface WeatherApi {
-
     companion object{
         val logging: HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BASIC
@@ -32,7 +31,6 @@ interface WeatherApi {
             return retrofit.create(WeatherApi::class.java)
         }
     }
-
     @GET("forecast")
     suspend fun getWeathers(
         @Query("appid") appid : String,
@@ -40,5 +38,4 @@ interface WeatherApi {
         @Query("units") units : String,
         @Query("lang") lang : String
     ) : WeathersNW
-
 }

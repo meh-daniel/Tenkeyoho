@@ -13,5 +13,4 @@ class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherReposit
     override suspend fun getWeather(): WeathersNW {
         return weatherApi.getWeathers(appid = APP_ID, city = CITY, units = UNITS, lang = LANG)
     }
-
 }
