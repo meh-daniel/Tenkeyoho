@@ -18,7 +18,7 @@ class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
                 val weathers = repository.getWeather()
                 _weathers.postValue(weathers.list)
             } catch (e : Throwable){
-                Log.e("xxx", "gfsadfas", e)
+                Log.e("xxx", "error in launcher MainViewModel", e)
             }
         }
     }
