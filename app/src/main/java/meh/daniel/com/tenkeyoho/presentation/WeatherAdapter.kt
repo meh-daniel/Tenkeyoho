@@ -12,6 +12,8 @@ import meh.daniel.com.tenkeyoho.databinding.ItemHotweatherBinding
 private const val HEAT_TYPE = 1000
 private const val COLD_TYPE = 1100
 
+private const val MAX_COLD_TEMP = 19
+
 class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHolder>(weatherDiffUtil){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =  when(viewType){
         HEAT_TYPE -> {
@@ -35,7 +37,7 @@ class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHold
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if(getItem(position).main.temp > 19){
+        return if(getItem(position).main.temp > MAX_COLD_TEMP){
             HEAT_TYPE
         } else{
             COLD_TYPE
