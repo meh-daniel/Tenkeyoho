@@ -21,5 +21,3 @@ pluginManagement {
 }
 rootProject.name = "Tenkeyoho"
 include(":app")
-include(":data")
-include(":domain")
