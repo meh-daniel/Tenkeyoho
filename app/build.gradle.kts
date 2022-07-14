@@ -62,6 +62,12 @@ dependencies {
     implementation(Dependencies.Navigation.fragment)
     implementation(Dependencies.Navigation.ui)
 
+    // Navigation
+    implementation(Dependencies.Room.ktx)
+    implementation(Dependencies.Room.runtime)
+    implementation(Dependencies.Room.paging)
+    kapt(Dependencies.Room.compiler)
+
     // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)

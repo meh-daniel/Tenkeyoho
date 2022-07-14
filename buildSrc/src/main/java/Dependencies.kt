@@ -18,6 +18,9 @@ object Dependencies {
     private const val versionAndroidCoreKtx = "1.7.0"
     private const val versionAndroidAppcompat = "1.4.2"
     private const val versionAndroidMaterial = "1.6.1"
+    // Room
+    private const val versionRoom = "2.3.0"
+    private const val versionRoomPagind = "2.4.0-alpha04"
     // Test
     private const val versionTestJUnit = "4.+"
     private const val versionTestAndroidxJUnit = "1.1.2"
@@ -33,6 +36,13 @@ object Dependencies {
     object Lifecycle {
         const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versionLifecycle"
         const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versionLifecycle"
+    }
+
+    object Room {
+        const val ktx = "androidx.room:room-ktx:$versionRoom"
+        const val runtime = "androidx.room:room-runtime:$versionRoom"
+        const val paging = "androidx.room:room-paging:$versionRoomPagind"
+        const val compiler = "androidx.room:room-compiler:$versionRoom"
     }
 
     object Navigation {
