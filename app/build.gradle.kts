@@ -46,6 +46,18 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas",)
+            arg("room.incremental", "true")
+            arg("room.expandProjection", "true")
+        }
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
 }
 
 dependencies {
