@@ -4,7 +4,7 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import meh.daniel.com.tenkeyoho.data.model.WeathersNW
-import meh.daniel.com.tenkeyoho.domain.WeatherRepository
+import meh.daniel.com.tenkeyoho.domain.network.WeatherRepository
 
 class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
 

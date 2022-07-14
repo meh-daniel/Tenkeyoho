@@ -1,7 +1,8 @@
-package meh.daniel.com.tenkeyoho.data
+package meh.daniel.com.tenkeyoho.data.network
 
+import meh.daniel.com.tenkeyoho.data.WeatherApi
 import meh.daniel.com.tenkeyoho.data.model.WeathersNW
-import meh.daniel.com.tenkeyoho.domain.WeatherRepository
+import meh.daniel.com.tenkeyoho.domain.network.WeatherRepository
 
 
 private const val APP_ID = "22e2d18f9cd7316c5de47fd73d2ae414"
