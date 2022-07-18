@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private var weatherAdapter = WeatherAdapter()
 
     private val mainViewModel : MainViewModel by viewModels {
-        MainViewModelFactory(App.weatherRepository)
+        MainViewModelFactory(App.weatherNetworkRepository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

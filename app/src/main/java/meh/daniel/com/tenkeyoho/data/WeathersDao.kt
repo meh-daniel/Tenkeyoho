@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.data.storage
+package meh.daniel.com.tenkeyoho.data
 
 import androidx.room.Delete
 import androidx.room.Insert

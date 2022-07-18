@@ -4,9 +4,9 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import meh.daniel.com.tenkeyoho.data.model.WeathersNW
-import meh.daniel.com.tenkeyoho.domain.network.WeatherRepository
+import meh.daniel.com.tenkeyoho.domain.network.WeatherNetworkRepository
 
-class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
+class MainViewModel(private val repository: WeatherNetworkRepository) :  ViewModel() {
 
     private val _weathers : MutableLiveData<List<WeathersNW.WeatherInfo>> = MutableLiveData()
     val weathers : LiveData<List<WeathersNW.WeatherInfo>> get() = _weathers
@@ -27,7 +27,7 @@ class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
     }
 }
 
-class MainViewModelFactory(private val repository: WeatherRepository) : ViewModelProvider.Factory {
+class MainViewModelFactory(private val repository: WeatherNetworkRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
