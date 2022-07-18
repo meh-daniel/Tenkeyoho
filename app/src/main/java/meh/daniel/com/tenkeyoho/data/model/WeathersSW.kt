@@ -16,10 +16,8 @@ data class WeathersSW(
     val cod: String,
     @ColumnInfo(name = "message")
     val message: Int
-) {
+){
     data class City(
-        @PrimaryKey(autoGenerate = true)
-        val idCity: Long,
         @Embedded
         val coord: Coord,
         @ColumnInfo(name = "country")
@@ -36,10 +34,8 @@ data class WeathersSW(
         val sunset: Int,
         @ColumnInfo(name = "timezone")
         val timezone: Int
-    ) {
+    ){
         data class Coord(
-            @PrimaryKey(autoGenerate = true)
-            val idCoord: Long,
             @ColumnInfo(name = "lat")
             val lat: Double,
             @ColumnInfo(name = "lon")
@@ -47,6 +43,8 @@ data class WeathersSW(
         )
     }
 }
+
+
 
 @Entity(
     tableName = "weathers_info"
@@ -71,16 +69,12 @@ data class WeatherInfo(
     @Embedded
     val wind: Wind,
     val weathersSwId : Long
-) {
+){
     data class Clouds(
-        @PrimaryKey(autoGenerate = true)
-        val idClouds: Long,
         @ColumnInfo(name = "all")
         val all: Int
     )
     data class Main(
-        @PrimaryKey(autoGenerate = true)
-        val idMain: Long,
         @ColumnInfo(name = "feels_like")
         val feelsLike: Double,
         @ColumnInfo(name = "grnd_level")
@@ -101,14 +95,10 @@ data class WeatherInfo(
         val tempMin: Double
     )
     data class Sys(
-        @PrimaryKey(autoGenerate = true)
-        val idSys: Long,
         @ColumnInfo(name = "pod")
         val pod: String
     )
     data class Wind(
-        @PrimaryKey(autoGenerate = true)
-        val idWind: Long,
         @ColumnInfo(name = "deg")
         val deg: Int,
         @ColumnInfo(name = "gust")

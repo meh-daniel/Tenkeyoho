@@ -7,11 +7,9 @@ import meh.daniel.com.tenkeyoho.data.model.*
 @Database(
     version = 1,
     entities = [
-        WeathersNW::class,
+        WeathersSW::class,
         WeatherInfo::class,
-        WeathersSWWithWeatherInfo::class,
-        Weather::class,
-        WeatherInfoWithWeather::class
+        Weather::class
     ]
 )
 abstract class AppDatabase : RoomDatabase() {
