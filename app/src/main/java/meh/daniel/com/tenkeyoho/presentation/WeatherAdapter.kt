@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import meh.daniel.com.tenkeyoho.data.model.WeathersNW
 import meh.daniel.com.tenkeyoho.databinding.ItemColdweatherBinding
 import meh.daniel.com.tenkeyoho.databinding.ItemHotweatherBinding
+import meh.daniel.com.tenkeyoho.domain.model.Weather
 
 private const val HEAT_TYPE = 1000
 private const val COLD_TYPE = 1100
 
 private const val MAX_COLD_TEMP = 19
 
-class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHolder>(weatherDiffUtil){
+class WeatherAdapter : ListAdapter<Weather, RecyclerView.ViewHolder>(weatherDiffUtil){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =  when(viewType){
         HEAT_TYPE -> {
             val binding = ItemHotweatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -37,7 +37,7 @@ class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHold
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if(getItem(position).main.temp > MAX_COLD_TEMP){
+        return if(getItem(position).temp > MAX_COLD_TEMP){
             HEAT_TYPE
         } else{
             COLD_TYPE
@@ -46,28 +46,27 @@ class WeatherAdapter : ListAdapter<WeathersNW.WeatherInfo, RecyclerView.ViewHold
 }
 
 class HeatViewHolder(private val binding: ItemHotweatherBinding) : RecyclerView.ViewHolder(binding.root){
-    fun bind(item: WeathersNW.WeatherInfo){
-        binding.tvTemp.text = item.main.temp.toString()
+    fun bind(item: Weather){
+        binding.tvTemp.text = item.temp.toString()
         binding.tvTime.text = item.dtTxt
     }
 }
 
 class ColdViewHolder(private val binding: ItemColdweatherBinding) : RecyclerView.ViewHolder(binding.root){
-    fun bind(item: WeathersNW.WeatherInfo){
-        binding.tvTemp.text = item.main.temp.toString()
+    fun bind(item: Weather){
+        binding.tvTemp.text = item.temp.toString()
         binding.tvTime.text = item.dtTxt
     }
 }
 
-private val weatherDiffUtil = object : DiffUtil.ItemCallback<WeathersNW.WeatherInfo>() {
+private val weatherDiffUtil = object : DiffUtil.ItemCallback<Weather>() {
     override fun areItemsTheSame(
-        oldItem: WeathersNW.WeatherInfo,
-        newItem: WeathersNW.WeatherInfo
+        oldItem: Weather,
+        newItem: Weather
     ): Boolean = oldItem == newItem
 
     override fun areContentsTheSame(
-        oldItem: WeathersNW.WeatherInfo,
-        newItem: WeathersNW.WeatherInfo
+        oldItem: Weather,
+        newItem: Weather
     ): Boolean = oldItem == newItem
-
 }
