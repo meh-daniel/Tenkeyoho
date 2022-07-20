@@ -13,7 +13,6 @@ internal fun WeatherNW.toDomain(): WeatherOfCity {
         }
     )
 }
-
 internal fun WeatherNW.WeatherInfo.toDomain() : Weather {
     return Weather(
         dtTxt = dtTxt,

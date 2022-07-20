@@ -27,9 +27,9 @@ interface WeatherApi {
         }
     }
     @GET("forecast")
-    suspend fun getWeathers(
-        @Query("appid") appid : String,
+    suspend fun getWeatherNWByCity(
         @Query("q") city : String,
+        @Query("appid") appid : String,
         @Query("units") units : String,
         @Query("lang") lang : String
     ) : WeatherNW

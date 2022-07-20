@@ -11,29 +11,29 @@ import meh.daniel.com.tenkeyoho.data.db.modelSW.WeatherSW
 interface WeatherDao {
 
     @Insert
-    suspend fun insertWeathersList(weathers: List<WeatherSW>)
+    suspend fun insertWeathersSWList(weathers: List<WeatherSW>)
 
     @Query("DELETE FROM weathers")
-    suspend fun deleteAllWeathers()
+    suspend fun deleteAllWeathersSW()
 
     @Query("DELETE FROM city")
-    suspend fun deleteAllCity()
+    suspend fun deleteAllCitySW()
 
     @Insert
-    suspend fun insertCity(citySW: CitySW)
+    suspend fun insertCitySW(citySW: CitySW)
 
     @Query("SELECT * FROM city LIMIT 1")
-    suspend fun getCity() : CitySW
+    suspend fun getCityForCurrentWeathersSW() : CitySW
 
     @Query("SELECT * FROM weathers")
-    suspend  fun getAllWeathers() : List<WeatherSW>
+    suspend  fun getAllWeathersSW() : List<WeatherSW>
 
     @Transaction
-    suspend fun updateAllWeathersWithCity(weathers: List<WeatherSW>, citySW: CitySW) {
-        deleteAllWeathers()
-        deleteAllCity()
-        insertCity(citySW)
-        insertWeathersList(weathers)
+    suspend fun updateAllWeathersSWWithCity(weathers: List<WeatherSW>, citySW: CitySW) {
+        deleteAllWeathersSW()
+        deleteAllCitySW()
+        insertCitySW(citySW)
+        insertWeathersSWList(weathers)
     }
 
 }
