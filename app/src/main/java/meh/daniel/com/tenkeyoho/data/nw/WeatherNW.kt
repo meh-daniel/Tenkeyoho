@@ -1,9 +1,8 @@
-package meh.daniel.com.tenkeyoho.data.model
-
+package meh.daniel.com.tenkeyoho.data.nw
 
 import com.google.gson.annotations.SerializedName
 
-data class WeathersNW(
+data class WeatherNW(
     @SerializedName("city")
     val city: City,
     @SerializedName("cnt")
@@ -57,7 +56,7 @@ data class WeathersNW(
         @SerializedName("visibility")
         val visibility: Int,
         @SerializedName("weather")
-        val weather: List<Weather>,
+        val weather: List<WeatherContent>,
         @SerializedName("wind")
         val wind: Wind
     ) {
@@ -65,7 +64,6 @@ data class WeathersNW(
             @SerializedName("all")
             val all: Int
         )
-
         data class Main(
             @SerializedName("feels_like")
             val feelsLike: Double,
@@ -86,13 +84,11 @@ data class WeathersNW(
             @SerializedName("temp_min")
             val tempMin: Double
         )
-
         data class Sys(
             @SerializedName("pod")
             val pod: String
         )
-
-        data class Weather(
+        data class WeatherContent(
             @SerializedName("description")
             val description: String,
             @SerializedName("icon")
@@ -102,7 +98,6 @@ data class WeathersNW(
             @SerializedName("main")
             val main: String
         )
-
         data class Wind(
             @SerializedName("deg")
             val deg: Int,
