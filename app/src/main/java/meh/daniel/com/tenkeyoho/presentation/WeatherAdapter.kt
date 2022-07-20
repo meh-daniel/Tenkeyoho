@@ -25,7 +25,7 @@ class WeatherAdapter : ListAdapter<Weather, RecyclerView.ViewHolder>(weatherDiff
             ColdViewHolder(binding)
         }
         else -> {
-            throw IllegalArgumentException("fuck onCreateViewHolder")
+            throw IllegalArgumentException("expection onCreateViewHolder")
         }
     }
 
