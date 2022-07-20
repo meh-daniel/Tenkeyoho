@@ -18,7 +18,7 @@ class WeatherAdapter : ListAdapter<Weather, RecyclerView.ViewHolder>(weatherDiff
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =  when(viewType){
         HEAT_TYPE -> {
             val binding = ItemHotweatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            HeatViewHolder(binding)
+            HotViewHolder(binding)
         }
         COLD_TYPE -> {
             val binding = ItemColdweatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -31,7 +31,7 @@ class WeatherAdapter : ListAdapter<Weather, RecyclerView.ViewHolder>(weatherDiff
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(getItemViewType(position)){
-            HEAT_TYPE -> (holder as HeatViewHolder).bind(item = getItem(position))
+            HEAT_TYPE -> (holder as HotViewHolder).bind(item = getItem(position))
             COLD_TYPE -> (holder as ColdViewHolder).bind(item = getItem(position))
         }
     }
@@ -45,7 +45,7 @@ class WeatherAdapter : ListAdapter<Weather, RecyclerView.ViewHolder>(weatherDiff
     }
 }
 
-class HeatViewHolder(private val binding: ItemHotweatherBinding) : RecyclerView.ViewHolder(binding.root){
+class HotViewHolder(private val binding: ItemHotweatherBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(item: Weather){
         binding.tvTemp.text = item.temp.toString()
         binding.tvTime.text = item.dtTxt
