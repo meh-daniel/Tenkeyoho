@@ -17,7 +17,7 @@ class WeatherRepositoryImpl(
     private val weatherApi: WeatherApi,
     private val appDataBase: AppDataBase
 ): WeatherRepository {
-    override suspend fun getWeather(): WeatherOfCity{
+    override suspend fun getWeather(): WeatherOfCity {
         return try {
             val weathers = weatherApi.getWeathers(appid = APP_ID, city = CITY, units = UNITS, lang = LANG).toDomain()
             appDataBase.weatherDao().updateAllWeathersWithCity(weathers.weathers.toSW(), CitySW(name = weathers.nameCity))
