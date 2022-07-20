@@ -1,6 +1,5 @@
-package meh.daniel.com.tenkeyoho.data
+package meh.daniel.com.tenkeyoho.data.nw
 
-import meh.daniel.com.tenkeyoho.data.model.WeathersNW
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,7 +17,7 @@ interface WeatherApi {
         private fun createLoggingOkHttpClient() = OkHttpClient.Builder().apply {
             addInterceptor(logging)
         }.build()
-        fun createApi() : WeatherApi{
+        fun createApiOpenWeatherMap() : WeatherApi{
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(createLoggingOkHttpClient())
@@ -33,5 +32,5 @@ interface WeatherApi {
         @Query("q") city : String,
         @Query("units") units : String,
         @Query("lang") lang : String
-    ) : WeathersNW
+    ) : WeatherNW
 }
