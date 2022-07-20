@@ -1,5 +1,6 @@
 package meh.daniel.com.tenkeyoho.presentation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-    private var weatherAdapter = WeatherAdapter()
+    private val weatherAdapter = WeatherAdapter()
 
     private val mainViewModel : MainViewModel by viewModels {
         MainViewModelFactory(App.weatherRepository)
@@ -23,6 +24,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initRecyclerView()
         observeViewModel()
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+            type = "text/plain"
+        }
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
     }
 
     private fun observeViewModel() {

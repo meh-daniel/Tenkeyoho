@@ -37,3 +37,9 @@ internal fun Weather.toSW() =
         temp = temp,
         dtTxt = dtTxt
     )
+
+internal fun  List<WeatherSW>.toDomain(): List<Weather> {
+    return map {
+        it.toDomain()
+    }
+}

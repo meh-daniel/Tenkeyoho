@@ -2,10 +2,12 @@ package meh.daniel.com.tenkeyoho.data
 
 import meh.daniel.com.tenkeyoho.data.db.AppDataBase
 import meh.daniel.com.tenkeyoho.data.db.modelSW.CitySW
+import meh.daniel.com.tenkeyoho.data.db.modelSW.WeatherSW
 import meh.daniel.com.tenkeyoho.data.nw.WeatherApi
 import meh.daniel.com.tenkeyoho.domain.WeatherRepository
 import meh.daniel.com.tenkeyoho.domain.model.Weather
 import meh.daniel.com.tenkeyoho.domain.model.WeatherOfCity
+import meh.daniel.com.tenkeyoho.presentation.WeatherAdapter
 
 private const val APP_ID = "22e2d18f9cd7316c5de47fd73d2ae414"
 private const val CITY = "London"
@@ -23,14 +25,10 @@ class WeatherRepositoryImpl(
             weathers
         }
         catch (e: Exception) {
-            val weathers : List<Weather> = appDataBase.weatherDao().getAllWeathersSW().map {
-                it.toDomain()
-            }
+            val weathers : List<Weather> = appDataBase.weatherDao().getAllWeathersSW().toDomain()
             val city : String = appDataBase.weatherDao().getCityForCurrentWeathersSW().name
             WeatherOfCity(city, weathers)
         }
     }
 
 }
-
-
