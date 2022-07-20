@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private var weatherAdapter = WeatherAdapter()
 
     private val mainViewModel : MainViewModel by viewModels {
-        MainViewModelFactory(App.weatherNetworkRepository)
+        MainViewModelFactory(App.weatherRepository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun observeViewModel() {
         mainViewModel.weathers.observe(this) {
-            weatherAdapter.submitList(it)
+            weatherAdapter.submitList(it.weathers)
         }
     }
 
