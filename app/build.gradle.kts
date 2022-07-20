@@ -38,10 +38,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
+
+        // без данного параметра viewModel не инициализировалась с помощью фабрики
+        freeCompilerArgs = listOf("-Xjvm-default=compatibility")
     }
     buildFeatures {
         viewBinding = true
+    }
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas",)
+            arg("room.incremental", "true")
+            arg("room.expandProjection", "true")
+        }
     }
     packagingOptions {
         resources {
@@ -60,6 +70,16 @@ dependencies {
     implementation(Dependencies.Lifecycle.viewmodel)
     implementation(Dependencies.Lifecycle.livedata)
 
+    // Navigation
+    implementation(Dependencies.Navigation.fragment)
+    implementation(Dependencies.Navigation.ui)
+
+    // Navigation
+    implementation(Dependencies.Room.ktx)
+    implementation(Dependencies.Room.runtime)
+    implementation(Dependencies.Room.paging)
+    kapt(Dependencies.Room.compiler)
+
     // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)
@@ -72,6 +92,7 @@ dependencies {
     // UI
     implementation(Dependencies.UI.constraintLayout)
     implementation(Dependencies.UI.recyclerView)
+    implementation(Dependencies.UI.fragmentKtx)
 
     // Android
     implementation(Dependencies.Android.coreKtx)

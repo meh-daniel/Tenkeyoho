@@ -1,20 +1,27 @@
 object Dependencies {
-
+    // Hilt
     private const val versionHilt = "2.40.5"
-
-    private const val versionLifecycle = "2.5.0"
-
+    // Lifecycle
+    private const val versionLifecycle = "2.4.0-alpha03"
+    // Navigation
+    private const val versionNavigation = "2.5.0"
+    // Coroutines
     private const val versionCoroutines = "1.6.0"
+    // Network
     private const val versionRetrofit2 = "2.6.2"
     private const val versionLogging = "4.2.1"
-
+    // UI
     private const val versionConstraintLayout = "2.1.4"
     private const val versionRecyclerView = "1.2.1"
-
+    private const val fragmentKtxVersion = "1.5.0"
+    // Android
     private const val versionAndroidCoreKtx = "1.7.0"
     private const val versionAndroidAppcompat = "1.4.2"
     private const val versionAndroidMaterial = "1.6.1"
-
+    // Room
+    private const val versionRoom = "2.3.0"
+    private const val versionRoomPagind = "2.4.0-alpha04"
+    // Test
     private const val versionTestJUnit = "4.+"
     private const val versionTestAndroidxJUnit = "1.1.2"
     private const val versionTestEspresso = "3.3.0"
@@ -31,6 +38,18 @@ object Dependencies {
         const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versionLifecycle"
     }
 
+    object Room {
+        const val ktx = "androidx.room:room-ktx:$versionRoom"
+        const val runtime = "androidx.room:room-runtime:$versionRoom"
+        const val paging = "androidx.room:room-paging:$versionRoomPagind"
+        const val compiler = "androidx.room:room-compiler:$versionRoom"
+    }
+
+    object Navigation {
+        const val fragment = "androidx.navigation:navigation-fragment:$versionNavigation"
+        const val ui = "androidx.navigation:navigation-ui:$versionNavigation"
+    }
+
     object Coroutines {
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versionCoroutines"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versionCoroutines"
@@ -45,6 +64,7 @@ object Dependencies {
     object UI {
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:$versionConstraintLayout"
         const val recyclerView = "androidx.recyclerview:recyclerview:$versionRecyclerView"
+        const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
     }
 
     object Android {
