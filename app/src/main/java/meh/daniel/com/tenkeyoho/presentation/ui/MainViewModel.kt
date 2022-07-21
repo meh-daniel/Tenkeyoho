@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation
+package meh.daniel.com.tenkeyoho.presentation.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,6 +15,8 @@ class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
     private val _weathers : MutableLiveData<WeatherOfCity> = MutableLiveData()
     val weathers : LiveData<WeatherOfCity> get() = _weathers
 
+    lateinit var nameCityOfTheCurrentWeathers : String
+
     init {
         loadWeathers()
     }
@@ -23,6 +25,7 @@ class MainViewModel(private val repository: WeatherRepository) :  ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val weathers = repository.getWeather()
+                nameCityOfTheCurrentWeathers = repository.getWeather().nameCity
                 _weathers.postValue(weathers)
             } catch (e: Throwable) {
                 throw IllegalArgumentException("fun getWeatherData exception:", e)

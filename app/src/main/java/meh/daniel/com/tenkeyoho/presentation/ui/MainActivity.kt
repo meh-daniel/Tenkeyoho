@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation
+package meh.daniel.com.tenkeyoho.presentation.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,12 +7,13 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import meh.daniel.com.tenkeyoho.App
 import meh.daniel.com.tenkeyoho.databinding.ActivityMainBinding
+import meh.daniel.com.tenkeyoho.presentation.model.DataSendUI
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-    private val weatherAdapter = WeatherAdapter()
+    private val weatherAdapter = WeatherAdapter(::sendSomething, ::sendSomething)
 
     private val mainViewModel : MainViewModel by viewModels {
         MainViewModelFactory(App.weatherRepository)
@@ -24,13 +25,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initRecyclerView()
         observeViewModel()
-        val sendIntent: Intent = Intent().apply {
+    }
+
+    private fun sendSomething(temp: String, dtTxt: String) {
+        val share = Intent.createChooser(Intent().apply {
+            type = "text/html"
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
-            type = "text/plain"
-        }
-        val shareIntent = Intent.createChooser(sendIntent, null)
-        startActivity(shareIntent)
+            putExtra(Intent.EXTRA_SUBJECT, "Информация о погоде города: ${mainViewModel.nameCityOfTheCurrentWeathers}")
+            putExtra(Intent.EXTRA_TEXT, "$dtTxt -  $temp")
+        }, null)
+        startActivity(share)
     }
 
     private fun observeViewModel() {
