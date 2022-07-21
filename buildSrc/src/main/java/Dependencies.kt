@@ -14,6 +14,7 @@ object Dependencies {
     private const val versionConstraintLayout = "2.1.4"
     private const val versionRecyclerView = "1.2.1"
     private const val fragmentKtxVersion = "1.5.0"
+    private const val activityKtxVersion = "1.5.0"
     // Android
     private const val versionAndroidCoreKtx = "1.7.0"
     private const val versionAndroidAppcompat = "1.4.2"
@@ -21,6 +22,8 @@ object Dependencies {
     // Room
     private const val versionRoom = "2.3.0"
     private const val versionRoomPagind = "2.4.0-alpha04"
+    // GeoLocation
+    private const val versionGeoLocation = "20.0.0"
     // Test
     private const val versionTestJUnit = "4.+"
     private const val versionTestAndroidxJUnit = "1.1.2"
@@ -45,6 +48,10 @@ object Dependencies {
         const val compiler = "androidx.room:room-compiler:$versionRoom"
     }
 
+    object Geo {
+        const val playServices = "androidx.room:room-ktx:$versionGeoLocation"
+    }
+
     object Navigation {
         const val fragment = "androidx.navigation:navigation-fragment:$versionNavigation"
         const val ui = "androidx.navigation:navigation-ui:$versionNavigation"
@@ -65,6 +72,7 @@ object Dependencies {
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:$versionConstraintLayout"
         const val recyclerView = "androidx.recyclerview:recyclerview:$versionRecyclerView"
         const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+        const val activityKtx = "androidx.activity:activity-ktx:$activityKtxVersion"
     }
 
     object Android {

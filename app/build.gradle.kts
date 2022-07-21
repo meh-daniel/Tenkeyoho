@@ -74,11 +74,14 @@ dependencies {
     implementation(Dependencies.Navigation.fragment)
     implementation(Dependencies.Navigation.ui)
 
-    // Navigation
+    // Room
     implementation(Dependencies.Room.ktx)
     implementation(Dependencies.Room.runtime)
     implementation(Dependencies.Room.paging)
     kapt(Dependencies.Room.compiler)
+
+    // GeoLocation
+    implementation(Dependencies.Geo.playServices)
 
     // Coroutines
     implementation(Dependencies.Coroutines.core)
@@ -93,6 +96,7 @@ dependencies {
     implementation(Dependencies.UI.constraintLayout)
     implementation(Dependencies.UI.recyclerView)
     implementation(Dependencies.UI.fragmentKtx)
+    implementation(Dependencies.UI.activityKtx)
 
     // Android
     implementation(Dependencies.Android.coreKtx)
