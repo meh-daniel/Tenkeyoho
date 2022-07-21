@@ -82,7 +82,7 @@ dependencies {
 
     // GeoLocation
     implementation(Dependencies.Geo.playServices)
-
+    
     // Coroutines
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Coroutines.android)

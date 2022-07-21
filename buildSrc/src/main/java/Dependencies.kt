@@ -49,7 +49,7 @@ object Dependencies {
     }
 
     object Geo {
-        const val playServices = "androidx.room:room-ktx:$versionGeoLocation"
+        const val playServices = "com.google.android.gms:play-services-location:$versionGeoLocation"
     }
 
     object Navigation {
