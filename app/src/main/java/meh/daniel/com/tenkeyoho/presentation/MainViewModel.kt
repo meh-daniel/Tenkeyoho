@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation.ui
+package meh.daniel.com.tenkeyoho.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

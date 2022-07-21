@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation.ui
+package meh.daniel.com.tenkeyoho.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import meh.daniel.com.tenkeyoho.App
 import meh.daniel.com.tenkeyoho.databinding.ActivityMainBinding
-import meh.daniel.com.tenkeyoho.presentation.model.DataSendUI
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package meh.daniel.com.tenkeyoho.presentation.ui
+package meh.daniel.com.tenkeyoho.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import meh.daniel.com.tenkeyoho.databinding.ItemColdweatherBinding
 import meh.daniel.com.tenkeyoho.databinding.ItemHotweatherBinding
 import meh.daniel.com.tenkeyoho.domain.model.Weather
-import meh.daniel.com.tenkeyoho.presentation.model.DataSendUI
 
 private const val HOT_TYPE = 1000
 private const val COLD_TYPE = 1100
