@@ -8,7 +8,7 @@ import meh.daniel.com.tenkeyoho.data.db.modelSW.CitySW
 import meh.daniel.com.tenkeyoho.data.db.modelSW.WeatherSW
 
 @Database(
-    version = 1,
+    version = 2,
     entities = [
         WeatherSW::class,
         CitySW::class

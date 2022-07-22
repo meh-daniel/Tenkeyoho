@@ -28,17 +28,17 @@ interface WeatherApi {
     }
     @GET("forecast")
     suspend fun getWeatherNWByCity(
-        @Query("q") city : String,
         @Query("appid") appid : String,
+        @Query("q") city : String,
         @Query("units") units : String,
         @Query("lang") lang : String
     ) : WeatherNW
 
     @GET("forecast")
     suspend fun getWeatherNWByCoordinates(
+        @Query("appid") appid : String,
         @Query("lat") lat : Double,
         @Query("lon") lon : Double,
-        @Query("appid") appid : String,
         @Query("units") units : String,
         @Query("lang") lang : String
     ) : WeatherNW

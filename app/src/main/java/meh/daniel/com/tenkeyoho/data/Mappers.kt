@@ -2,6 +2,7 @@ package meh.daniel.com.tenkeyoho.data
 
 import meh.daniel.com.tenkeyoho.data.db.modelSW.WeatherSW
 import meh.daniel.com.tenkeyoho.data.nw.WeatherNW
+import meh.daniel.com.tenkeyoho.domain.model.CoordinatesOfCity
 import meh.daniel.com.tenkeyoho.domain.model.Weather
 import meh.daniel.com.tenkeyoho.domain.model.WeatherOfCity
 
@@ -10,7 +11,11 @@ internal fun WeatherNW.toDomain(): WeatherOfCity {
         nameCity = city.name,
         weathers = list.map {
             it.toDomain()
-        }
+        },
+        coordinatesOfCity = CoordinatesOfCity(
+            lat = city.coord.lat,
+            lon = city.coord.lon
+        )
     )
 }
 internal fun WeatherNW.WeatherInfo.toDomain() : Weather {

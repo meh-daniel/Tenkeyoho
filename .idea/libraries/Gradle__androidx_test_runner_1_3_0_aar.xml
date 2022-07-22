@@ -9,6 +9,9 @@
       <root url="jar://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/04b7f3f537c3e8517d8061dd58a90576/transformed/runner-1.3.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/04b7f3f537c3e8517d8061dd58a90576/transformed/runner-1.3.0/res" />
       <root url="file://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/04b7f3f537c3e8517d8061dd58a90576/transformed/runner-1.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/e1148078c3fe155c3b994cc66deadc00/transformed/runner-1.3.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/e1148078c3fe155c3b994cc66deadc00/transformed/runner-1.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AndroidStudioProjects/gradle/caches/transforms-3/e1148078c3fe155c3b994cc66deadc00/transformed/runner-1.3.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/AndroidStudioProjects/gradle/caches/modules-2/files-2.1/androidx.test/runner/1.3.0/c0fd1f1e715bfa4777ae6a679444f7471205ee7c/runner-1.3.0-javadoc.jar!/" />
