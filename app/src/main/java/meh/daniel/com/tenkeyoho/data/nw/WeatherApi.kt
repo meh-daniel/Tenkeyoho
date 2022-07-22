@@ -33,4 +33,14 @@ interface WeatherApi {
         @Query("units") units : String,
         @Query("lang") lang : String
     ) : WeatherNW
+
+    @GET("forecast")
+    suspend fun getWeatherNWByCoordinates(
+        @Query("lat") lat : Double,
+        @Query("lon") lon : Double,
+        @Query("appid") appid : String,
+        @Query("units") units : String,
+        @Query("lang") lang : String
+    ) : WeatherNW
+
 }
